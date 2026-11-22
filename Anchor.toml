@@ -1,0 +1,22 @@
+skip_local_validator = true
+
+[toolchain]
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.localnet]
+registro_ventas_local = "FXUhG74GQe6rCuWrMzowVoVnVRwd89DndfRV6JSESv7F"
+
+[programs.devnet]
+registro_ventas_local = "FXUhG74GQe6rCuWrMzowVoVnVRwd89DndfRV6JSESv7F"
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "cargo test"
+
+[hooks]

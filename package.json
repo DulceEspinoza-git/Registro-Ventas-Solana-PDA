@@ -1,0 +1,28 @@
+{
+  "name": "registro_ventas_local",
+  "version": "1.0.0",
+  "description": "![banner](./images/banner.jpg)",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DulceEspinoza-git/Registro-Ventas-Solana-PDA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/DulceEspinoza-git/Registro-Ventas-Solana-PDA/issues"
+  },
+  "homepage": "https://github.com/DulceEspinoza-git/Registro-Ventas-Solana-PDA#readme",
+  "dependencies": {
+    "@anchor-lang/core": "^1.2.2",
+    "@solana/web3.js": "^1.99.0"
+  }
+}
