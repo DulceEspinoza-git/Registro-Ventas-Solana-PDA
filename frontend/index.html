@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registro de Ventas - Solana</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 860px; margin: 24px auto; padding: 0 16px; background:#0f1115; color:#e8e8e8; }
+    h1 { margin-bottom: 4px; } h2 { margin-top: 28px; font-size: 18px; }
+    .card { background:#1a1d24; border:1px solid #2b303b; border-radius:10px; padding:14px; margin:10px 0; }
+    input, select { padding:8px; border-radius:6px; border:1px solid #3a4150; background:#0f1115; color:#e8e8e8; margin:2px; }
+    button { padding:8px 12px; border:0; border-radius:6px; background:#7c5cff; color:white; cursor:pointer; margin:2px; }
+    button.sec { background:#3a4150; } button.red { background:#c0392b; }
+    .venta { margin-left:18px; padding:4px 0; border-top:1px dashed #2b303b; }
+    #log div { font-family: monospace; font-size: 13px; padding: 3px 0; word-break: break-all; }
+    .ok { color:#4ade80; } .err { color:#f87171; } a { color:#93c5fd; }
+    .muted { color:#9aa3b2; font-size:14px; }
+  </style>
+</head>
+<body>
+  <h1>Registro de Ventas</h1>
+  <div class="muted">Programa en Solana Devnet con PDAs · cliente web con wallet</div>
+
+  <div class="card">
+    <button id="btnConectar">Conectar Phantom</button>
+    <span id="wallet" class="muted"></span> <span id="saldo" class="muted"></span>
+  </div>
+
+  <div class="card">
+    <b>Negocio:</b>
+    <input id="negocio" value="Cafe Frontend" />
+    <button id="btnCargar" class="sec">Cargar</button>
+    <button id="btnRegistro">Crear registro</button>
+  </div>
+
+  <div id="datos"></div>
+
+  <div id="acciones" hidden>
+    <h2>Acciones</h2>
+    <div class="card">
+      <b>Nuevo cliente:</b>
+      <input id="nombreCliente" placeholder="Nombre" />
+      <button id="btnCliente">Crear cliente</button>
+    </div>
+    <div class="card">
+      <b>Registrar venta:</b>
+      <select id="selCliente"></select>
+      <input id="sku" placeholder="SKU (max 5)" size="8" />
+      <input id="desc" placeholder="Descripción" />
+      <input id="monto" type="number" placeholder="Monto" style="width:90px" />
+      <button id="btnVenta">Registrar venta</button>
+    </div>
+  </div>
+
+  <h2>Registro de operaciones</h2>
+  <div id="log" class="card"></div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

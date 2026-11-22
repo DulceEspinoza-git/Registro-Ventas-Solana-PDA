@@ -53,6 +53,22 @@ Ejecutar `node demo.cjs`. El paso 4 intenta registrar una venta con monto 0 y el
 | Cliente | `["cliente", registro, id (u16, little-endian)]` |
 | Venta | `["venta", cliente, sku]` |
 
+## Frontend con wallet
+
+Interfaz web en `frontend/` (Vite + `@anchor-lang/core` + Phantom) conectada al programa en Devnet. Cada operación se firma con la wallet y la página muestra los datos leídos de las cuentas Registro, Cliente y Venta, con el link de cada transacción al Explorer y los errores del programa.
+
+Requisitos: extensión Phantom con Testnet Mode / Solana Devnet activado y algo de SOL de Devnet.
+
+    cd frontend
+    npm install
+    npm run dev
+
+Abrir http://localhost:5173, pulsar "Conectar Phantom" y usar los botones: crear registro, crear cliente, registrar venta, cambiar monto, devolución y eliminar cliente.
+
+![Cliente con venta y rechazo ClienteConVentas](./images/front1.png)
+![Cambio de monto firmado con Phantom](./images/front2.png)
+![Devolución y baja de cliente](./images/front3.png)
+
 ## Cómo ejecutarlo
 
 Requisitos: Rust, Solana CLI, Anchor y Node.js, con una wallet en `~/.config/solana/id.json` con SOL de Devnet.
